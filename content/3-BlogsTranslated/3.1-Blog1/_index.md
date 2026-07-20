@@ -1,6 +1,6 @@
 ---
-title: "Serverless URL Shortener"
-date: 2026-07-14
+title: "Automatic Spaced Repetition System with Amazon Bedrock & Step Functions"
+date: 2026-07-20
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
@@ -10,55 +10,51 @@ pre: " <b> 3.1. </b> "
 
 | Item | Details |
 | --- | --- |
-| Original title | Build a Serverless, Private URL Shortener |
-| Source | [AWS Compute Blog](https://aws.amazon.com/blogs/compute/build-a-serverless-private-url-shortener/) |
-| Topics | Serverless URL shortener, Lambda, API Gateway, S3 website redirect, CloudFront |
-| Workshop link | Section 5 — compare the AWS sample design with my Function URL + DynamoDB architecture |
+| Original title | Tự động tạo hệ thống ôn tập "Spaced Repetition" bằng Amazon Bedrock & Step Functions |
+| Author / Source | Toàn Ngô — [AWS Study Group VN](https://www.facebook.com/share/p/1DiaeMY6Sv/) (Facebook community post) |
+| Topics | GenAI, Amazon Bedrock, AWS Step Functions, Wait state, event-driven architecture, EdTech |
 
 #### 2. Summary
 
-The article starts from a practical Solutions Architect need: pre-signed URLs are long and hard to share, so the author wants a **private**, self-controlled URL shortener without managing servers. The proposed design uses managed services: **S3**, **API Gateway**, **Lambda**, optionally **CloudFront**, packaged with **CloudFormation**.
+The post shares an architecture the AWS Study Group VN team built to solve a common EdTech pain point: automatically generating and scheduling review content based on **Spaced Repetition** (reviewing material at increasing intervals — e.g. 1 day, 3 days, 7 days after first learning — to improve long-term retention).
 
-The key technical idea is **S3 website redirects**: each short link is an (often empty) object with `WebsiteRedirectLocation` metadata pointing to the long URL. Opening the short URL on the website endpoint makes S3 return an HTTP redirect **without Lambda running at redirect time**.
+Instead of a traditional cron job that repeatedly polls a database to check whose turn it is to review, the team designed an **event-driven** flow that combines **Amazon Bedrock** for content generation with **AWS Step Functions** for orchestration and scheduling.
 
-Creating short links uses a static HTML admin page on S3. Shorten → POST to API Gateway → Lambda validates → random short id → PutObject with redirect metadata → return the short URL.
+![Facebook post by AWS Study Group VN describing the Spaced Repetition architecture](/images/3-BlogsTranslated/3.1-Blog1/facebook-post.png)
 
 #### 3. Main content
 
-##### 3.1. S3 as a redirection engine
+##### 3.1. Automatic question generation with GenAI (Amazon Bedrock)
 
-After enabling Static Website Hosting, each short code maps to an object key with website-redirect metadata. Requests to the website endpoint become redirects. This minimizes compute on the read path: no Lambda cold starts when many users only click short links.
+When a learner finishes watching a lesson video, the system takes the lesson transcript and passes it through a large language model on **Amazon Bedrock**. With a single well-crafted prompt, Bedrock generates 3–5 multiple-choice questions closely tied to what was just studied — removing the need to manually author quiz content for every lesson.
 
-![AWS sample architecture: S3 redirect](/images/3-BlogsTranslated/3.1-Blog1/aws-sample-architecture.png)
+##### 3.2. Scheduling reviews with AWS Step Functions
 
-##### 3.2. Creating short links via API Gateway + Lambda
+Rather than a cron job constantly scanning the database, the whole review pipeline is pushed into a **Step Functions** state machine. The key feature exploited here is the **Wait state**: the workflow "sleeps" for exactly 1 day, then sends the first review email/notification, sleeps again for 3 more days, sends the next review, and so on — modelling the spaced-repetition timeline directly as workflow states instead of application logic.
 
-The admin UI is static. Creation logic lives in Lambda behind API Gateway. Lambda generates a short random key, writes the S3 object, and returns a URL reachable via the website/CloudFront.
+##### 3.3. Cost optimization
 
-##### 3.3. CloudFront and infrastructure packaging
+A Step Functions **Wait state** does not charge for the time spent waiting — cost is only incurred when the state **transitions** (i.e., when something actually happens). This is significantly cheaper than keeping an EC2 instance or a Lambda function alive (or repeatedly invoked) just to check "is it time yet?" for every single learner.
 
-CloudFront can unify the entry point and support custom domains. CloudFormation packages S3, Lambda, API Gateway, and helper custom resources.
+![Spaced Repetition workflow: Bedrock generates content, Step Functions schedules reviews at 1/3/7-day boxes](/images/3-BlogsTranslated/3.1-Blog1/spaced-repetition-architecture.png)
 
-##### 3.4. What “private” means here
+##### 3.4. Advantage: workflow as a visual, editable state machine
 
-“Private” leans toward **self-hosted / self-controlled** rather than strictly VPC-private. Public website endpoint and bucket policy implications still matter.
+By moving the review scheduling logic into Step Functions, the whole process becomes a visual **state machine diagram** rather than logic buried inside application code. The team can change the review cadence (e.g., add a 14-day box) or the notification channel without touching the core business logic — only the state machine definition changes.
+
+The post also references the official AWS docs used as the technical basis:
+- [Integrating Amazon Bedrock with Step Functions](https://docs.aws.amazon.com/step-functions/latest/dg/connect-bedrock.html)
+- [Using the Wait state in Step Functions](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-wait-state.html)
 
 #### 4. Reflection
 
-Useful because it matches the shortener problem while showing a different architectural trade-off than my workshop.
+Although this post targets an EdTech use case rather than the URL-shortener problem in my workshop, the underlying architectural principle is the same one I applied in Section 5: **prefer event-driven, managed services over polling loops** to save cost and reduce operational overhead.
 
-| Item | AWS Compute Blog | My workshop |
+| Item | Spaced Repetition (Bedrock + Step Functions) | My workshop |
 | --- | --- | --- |
-| Mapping store | S3 object + redirect metadata | DynamoDB `url-shortener-links` |
-| Redirect | S3 website redirect | Lambda **HTTP 302** |
-| Ingress API | API Gateway | **Lambda Function URL** |
-| Clicks / stats | Not the focus | Atomic `clickCount` + `/stats/{code}` |
-| Frontend | Admin HTML on S3 | Shortener UI on S3 + `config.js` |
+| Trigger model | Event-driven state machine (Wait state) | Event-driven Lambda Function URL |
+| "Waiting" mechanism | Step Functions Wait state (no compute cost while idle) | Not needed — request/response is synchronous |
+| Content/logic generation | Amazon Bedrock (GenAI) | Static shortener logic in Lambda |
+| Observability | Visual state machine graph | CloudWatch Logs + metric filter + SNS alarm (Section 5.3.3) |
 
-![Deployed workshop architecture: S3 + Function URL + DynamoDB + CloudWatch/SNS](/images/3-BlogsTranslated/3.1-Blog1/my-workshop-architecture.png)
-
-S3 redirects are lean for “shorten + redirect only.” When you need clicks, stats, conditional 404s, and centralized handler logging, Function URL + DynamoDB is more flexible. In the workshop I verified **302** with PowerShell and stored mappings in DynamoDB:
-
-![Verified 302 redirect in the workshop](/images/3-BlogsTranslated/3.1-Blog1/redirect-302.png)
-
-Takeaway: multiple valid serverless shortener designs exist; choice depends on extensibility needs.
+The biggest takeaway for me is the **Wait state pattern**: it is a clean way to implement "do X, then wait N days, then do Y" without a scheduler service or a cron job that has to keep checking timestamps. If I extend my Serverless URL Shortener in the future — for example, to send a reminder when a short link is about to expire, or to auto-archive links unused for 30 days — Step Functions Wait states would be a much more cost-efficient option than a periodic Lambda triggered by EventBridge every few minutes. It is also a good reminder that combining GenAI (Bedrock) with orchestration services (Step Functions) is becoming a common pattern for building smart, low-maintenance automation on AWS.
