@@ -7,11 +7,11 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Huỳnh Tấn Tồn
+&emsp; **Họ và tên:** Ngô Quốc Toàn
 
-&emsp; **Số điện thoại:** 0354456232
+&emsp; **Số điện thoại:** 0338928742
 
-&emsp; **Email:** tonhuynh.060904@gmail.com
+&emsp; **Email:** tngo5415@gmail.com
 
 &emsp; **Trường:** Đại học Công nghệ TP.HCM (HUTECH)
 

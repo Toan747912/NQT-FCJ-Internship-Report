@@ -12,7 +12,7 @@ During the internship at First Cloud Journey – AWS FCJ HCM, I took part in aca
 
 &emsp;**Event name:** FCAJ Community Day 
 
-&emsp;**Time:** 09:00 – 12:00 on 30/05/2026
+&emsp;**Time:** 09:00 – 12:00 on 09/05/2026
 
 &emsp;**Location:** Floor 26, Bitexco Building, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
 
@@ -22,7 +22,7 @@ During the internship at First Cloud Journey – AWS FCJ HCM, I took part in aca
 
 &emsp;**Event name:** FCAJ Community Day 
 
-&emsp;**Time:** 09:00 – 12:00 on 06/06/2026
+&emsp;**Time:** 09:00 – 12:00 on 23/05/2026
 
 &emsp;**Location:** Floor 26, Bitexco Building, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
 
@@ -32,7 +32,7 @@ During the internship at First Cloud Journey – AWS FCJ HCM, I took part in aca
 
 &emsp;**Event name:** FCAJ Community Day 
 
-&emsp;**Time:** 09:00 – 12:00 on 23/05/2026
+&emsp;**Time:** 09:00 – 12:00 on 06/06/2026
 
 &emsp;**Location:** Floor 26, Bitexco Building, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
 

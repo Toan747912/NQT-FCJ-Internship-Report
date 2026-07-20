@@ -38,8 +38,6 @@ Their sharing was highly hands-on, focused on the experience of building a proje
 - **Team skills:** clear task division combined with constant communication was the key to shipping successfully under a tight deadline.
 - **Handling pressure:** a realistic account of balancing output, bug fixes, and personal well-being (sleep loss, exhaustion) to finish the project.
 
-![Sharing by The Ballers](/images/4-EventParticipated/4.1-Event1/hackathon-the-ballers.png)
-
 ### 2. A practical learning roadmap (Huynh Thai Linh)
 
 The speaker proposed a 3-phase model to build a sustainable cloud mindset, avoiding the trap of jumping straight into using services without a proper foundation:
@@ -49,10 +47,6 @@ The speaker proposed a 3-phase model to build a sustainable cloud mindset, avoid
 | **Phase 1 – Mindset & Architecture** | Build a foundation through **AWS Cloud Quest** (suited to Cloud Practitioner level) |
 | **Phase 2 – Code & Fast Testing** | Practice with open-source tools such as **Floci** to streamline the testing workflow |
 | **Phase 3 – Real-world Deployment** | Bring the application into a real AWS environment |
-
-![Effective Practical Learning Roadmap](/images/4-EventParticipated/4.1-Event1/learning-roadmap.png)
-
-![Thank you – Huynh Thai Linh](/images/4-EventParticipated/4.1-Event1/thank-you-huynh-thai-linh.png)
 
 ---
 

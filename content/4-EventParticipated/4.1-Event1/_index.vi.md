@@ -38,8 +38,6 @@ Phần chia sẻ mang tính thực chiến cao, tập trung vào trải nghiệm
 - **Kỹ năng nhóm:** Sự kết hợp giữa chia nhiệm vụ rõ ràng và giao tiếp liên tục là chìa khóa để vận hành sản phẩm thành công trong thời hạn gấp rút.
 - **Vượt qua áp lực:** Trải nghiệm thực tế về việc cân bằng giữa hiệu suất công việc, các bản sửa lỗi (fix bugs) và sức khỏe cá nhân (mất ngủ, kiệt sức) để hoàn thành dự án.
 
-![Phần chia sẻ của đội The Ballers](/images/4-EventParticipated/4.1-Event1/hackathon-the-ballers.png)
-
 ### 2. Lộ trình học tập thực tế (Huỳnh Thái Linh)
 
 Diễn giả đề xuất mô hình 3 giai đoạn giúp định hình tư duy đám mây bền vững, tránh việc "nhảy cóc" vào sử dụng dịch vụ mà thiếu nền tảng:
@@ -50,9 +48,6 @@ Diễn giả đề xuất mô hình 3 giai đoạn giúp định hình tư duy �
 | **Giai đoạn 2 – Mã hóa & Kiểm tra nhanh (Code & Fast Testing)** | Thực hành với các công cụ như **Floci** mã nguồn mở để tối ưu hóa quy trình kiểm thử |
 | **Giai đoạn 3 – Triển khai sản xuất (Real-world Deployment)** | Đưa ứng dụng vào môi trường AWS thực tế |
 
-![Effective Practical Learning Roadmap](/images/4-EventParticipated/4.1-Event1/learning-roadmap.png)
-
-![Thank you – Huynh Thai Linh](/images/4-EventParticipated/4.1-Event1/thank-you-huynh-thai-linh.png)
 
 ---
 

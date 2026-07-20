@@ -12,7 +12,7 @@ Trong quá trình thực tập tại First Cloud Journey – AWS FCJ HCM, mình 
 
 &emsp;**Tên sự kiện:** FCAJ Community Day 
 
-&emsp;**Thời gian:** 09:00 – 12:00 ngày 30/05/2026
+&emsp;**Thời gian:** 09:00 – 12:00 ngày 09/05/2026
 
 &emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
 
@@ -22,7 +22,7 @@ Trong quá trình thực tập tại First Cloud Journey – AWS FCJ HCM, mình 
 
 &emsp;**Tên sự kiện:** FCAJ Community Day 
 
-&emsp;**Thời gian:** 09:00 – 12:00 ngày 06/06/2026
+&emsp;**Thời gian:** 09:00 – 12:00 ngày 23/05/2026
 
 &emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
 
@@ -32,7 +32,7 @@ Trong quá trình thực tập tại First Cloud Journey – AWS FCJ HCM, mình 
 
 &emsp;**Tên sự kiện:** FCAJ Community Day 
 
-&emsp;**Thời gian:** 09:00 – 12:00 ngày 23/05/2026
+&emsp;**Thời gian:** 09:00 – 12:00 ngày 06/06/2026
 
 &emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
 

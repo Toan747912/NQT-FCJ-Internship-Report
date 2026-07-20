@@ -1,6 +1,6 @@
 ---
 title: "Event 2"
-date: 2026-06-06
+date: 2026-05-23
 weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
@@ -11,42 +11,40 @@ pre: " <b> 4.2. </b> "
 | Hạng mục | Nội dung |
 | --- | --- |
 | Tên sự kiện | **FCAJ Community Day** |
-| Thời gian | **09:00 – 12:00** ngày **06/06/2026** |
+| Thời gian | **09:00 – 12:00** ngày **23/05/2026** |
 | Địa điểm | Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, TP. Hồ Chí Minh |
 | Vai trò | **Người tham dự** |
 
-![Poster FCAJ Community Day](/images/4-EventParticipated/4.2-Event2/saturday-meetup.png)
+![Poster FCAJ Community Day](/images/4-EventParticipated/4.2-Event2/fcaj-community-day.png)
 
-### Mục đích tham dự
+### Mục tiêu tham dự
 
-Mình tham dự Saturday Meet up để:
+Mình tham dự FCAJ Community Day lần này để:
 
-- Nghe chia sẻ thực tế về kiến thức, kỹ năng và trải nghiệm làm việc từ các diễn giả.
-- Kết nối, trao đổi với cộng đồng học viên / intern trong hệ sinh thái First Cloud Journey / AWS.
-- Thu thập góc nhìn hữu ích cho hành trình học tập và định hướng nghề nghiệp trong thời gian thực tập.
+- Lắng nghe trải nghiệm thực chiến từ cộng đồng FCAJ/AWS.
+- Học hỏi kỹ năng trình bày, làm việc nhóm dưới áp lực thời gian.
+- Tiếp cận lộ trình học tập thực tế để áp dụng vào kỳ thực tập.
 
-### Nội dung sự kiện
+### Điểm nhấn sự kiện
 
-Theo thông tin chương trình, Saturday Meet up là buổi chia sẻ vào sáng thứ Bảy tại Bitexco (tầng 26), tập trung vào:
+- **Chia sẻ 1 – Nhóm The Ballers:** chia sẻ về hành trình xây dựng sản phẩm trong thời gian ngắn (Hackathon 36 giờ). Thông điệp chính: tập trung vào các tính năng cốt lõi (MVP), phân chia công việc rõ ràng và duy trì giao tiếp liên tục trong nhóm.
+- **Chia sẻ 2 – Huynh Thai Linh:** chia sẻ về lộ trình học tập thực tế gồm 3 giai đoạn:
+  - Giai đoạn 1: Xây dựng tư duy kiến trúc thông qua **AWS Cloud Quest**.
+  - Giai đoạn 2: Lập trình và kiểm thử nhanh với **Floci**.
+  - Giai đoạn 3: Triển khai thực tế trên môi trường **Production** của AWS.
 
-- Câu chuyện thực tiễn, kiến thức và kỹ năng từ người chia sẻ.
-- Trao đổi, networking giữa người tham dự.
-- Cơ hội học hỏi để hỗ trợ lộ trình học và sự nghiệp (cũng mở cửa cho người muốn đăng ký làm speaker nếu muốn chia sẻ hành trình của bản thân).
+### Bài học đúc kết
 
-### Những gì mình học được (vai trò người tham dự)
+- **Kỹ năng mềm:** cách truyền tải thông tin ngắn gọn, súc tích khi đứng trước đám đông; kỹ năng phối hợp nhóm hiệu quả để đạt được deadline.
+- **Kỹ năng chuyên môn:** tư duy đi từ "tư duy kiến trúc" → "lập trình/test" → "triển khai thực tế" thay vì thao tác máy móc trên Console; cách vận dụng context engineering để sử dụng AI hiệu quả hơn.
 
-- Buổi meetup định kỳ giúp duy trì nhịp học ngoài lab/console: nghe trải nghiệm thật, hỏi đáp, mở rộng network.
-- Việc lắng nghe nhiều góc chia sẻ giúp mình đối chiếu với dự án thực tập (URL Shortener / serverless) và cách trình bày kiến thức.
-- Không khí meetup khuyến khích vừa học vừa kết nối — phù hợp với định hướng cộng đồng FCAJ.
+### Kế hoạch ứng dụng
 
-### Ứng dụng vào quá trình thực tập
-
-- Chủ động tham gia các buổi meetup để bổ sung trải nghiệm soft skills và networking.
-- Vận dụng các tip / góc nhìn từ phần chia sẻ vào cách học cloud có lộ trình và hoàn thiện báo cáo / workshop.
-- Xem meetup như kênh cập nhật văn hóa cộng đồng AWS FCJ HCM ngoài công việc hàng ngày trên AWS Console.
+- **Dự án thực tập:** áp dụng lộ trình 3 giai đoạn vào dự án URL Shortener: tìm hiểu kiến trúc (Lambda, DynamoDB, S3) → viết code và test → triển khai vận hành.
+- **Tư duy mới:** luôn đặt câu hỏi "ai dùng?", "dùng để làm gì?" trước khi thiết kế giải pháp; giữ tư duy lặp nhanh (fast-iterate) để cải tiến sản phẩm liên tục.
 
 ### Trải nghiệm cá nhân
 
-Là **người tham dự**, mình có mặt tại tầng 26 Bitexco trong khung giờ 09:00–12:00 ngày 06/06/2026. Không khí buổi Saturday Meet up khá thoải mái và cởi mở, thiên về chia sẻ kinh nghiệm thực tế hơn là đào tạo bài bản, nhờ vậy mình thấy dễ tiếp cận và gần gũi hơn với cộng đồng FCAJ/AWS.
+Sự kiện mang lại cho mình góc nhìn cân bằng giữa kỹ thuật chuyên sâu và kinh nghiệm làm dự án thực tế, rất phù hợp cho một thực tập sinh.
 
-> Nhìn chung, Event 2 giúp mình duy trì thói quen tham gia cộng đồng đều đặn — lắng nghe, đặt câu hỏi, kết nối — bên cạnh việc hoàn thiện phần nội dung kỹ thuật của báo cáo thực tập.
+> Bước đi tiếp theo: kết nối với diễn giả trên LinkedIn để mở rộng kiến thức, hoàn thiện báo cáo thực tập dựa trên framework đã học và bắt đầu thực hành xây dựng dự án serverless.

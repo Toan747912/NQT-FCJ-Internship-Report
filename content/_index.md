@@ -9,11 +9,11 @@ chapter: false
 # Internship Report
 
 ### Student Information:
-&emsp; **Full Name:** Huynh Tan Ton
+&emsp; **Full Name:** Ngo Quoc Toan
 
-&emsp; **Phone Number:** 0354456232
+&emsp; **Phone Number:** 0338928742
 
-&emsp; **Email:** tonhuynh.060904@gmail.com
+&emsp; **Email:** tngo5415@gmail.com
 
 &emsp; **University:** Ho Chi Minh City University of Technology (HUTECH)
 
