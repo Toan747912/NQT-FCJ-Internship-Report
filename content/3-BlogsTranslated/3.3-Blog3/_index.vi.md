@@ -1,6 +1,6 @@
 ---
 title: "Đồng bộ tiến độ video realtime với AWS AppSync"
-date: 2026-07-21
+date: 2026-07-20
 weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
@@ -12,6 +12,7 @@ pre: " <b> 3.3. </b> "
 | --- | --- |
 | Tiêu đề gốc | Xây dựng tính năng đồng bộ tiến độ video (Progress Syncing) realtime với AWS AppSync |
 | Tác giả / Nguồn | AWS Study Group VN — bài chia sẻ của nhóm thực tập (tiếp nối Blog 2) |
+| Ngày đăng | 20/07/2026 |
 | Chủ đề | AWS AppSync, GraphQL, DynamoDB Direct Resolver, WebSocket subscription, đồng bộ realtime, EdTech |
 | AWS Docs liên quan | [AppSync real-time data](https://docs.aws.amazon.com/appsync/latest/devguide/real-time-data.html), [DynamoDB resolvers tutorial](https://docs.aws.amazon.com/appsync/latest/devguide/tutorial-dynamodb-resolvers.html) |
 

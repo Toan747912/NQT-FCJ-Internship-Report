@@ -1,6 +1,6 @@
 ---
 title: "Auto-highlight video subtitles synced with speech using Amazon Transcribe"
-date: 2026-07-21
+date: 2026-07-20
 weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
@@ -12,6 +12,7 @@ pre: " <b> 3.2. </b> "
 | --- | --- |
 | Original title | Tự động hóa tính năng bôi sáng phụ đề video đồng bộ với giọng đọc bằng Amazon Transcribe |
 | Author / Source | AWS Study Group VN — community post (internship team sharing) |
+| Publish date | 20/07/2026 |
 | Topics | Amazon Transcribe, S3, Lambda, Step Functions, serverless media pipeline, EdTech, karaoke-style subtitle highlight |
 | Related AWS blogs | [Serverless video subtitles](https://aws.amazon.com/blogs/compute/implementing-serverless-video-subtitles/), [Video subtitles with translation (ML)](https://aws.amazon.com/blogs/machine-learning/create-video-subtitles-with-translation-using-machine-learning/) |
 

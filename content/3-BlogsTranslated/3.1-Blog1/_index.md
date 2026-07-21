@@ -12,6 +12,7 @@ pre: " <b> 3.1. </b> "
 | --- | --- |
 | Original title | Tự động tạo hệ thống ôn tập "Spaced Repetition" bằng Amazon Bedrock & Step Functions |
 | Author / Source | Toàn Ngô — [AWS Study Group VN](https://www.facebook.com/share/p/1DiaeMY6Sv/) (Facebook community post) |
+| Publish date | 20/07/2026 |
 | Topics | GenAI, Amazon Bedrock, AWS Step Functions, Wait state, event-driven architecture, EdTech |
 
 #### 2. Summary

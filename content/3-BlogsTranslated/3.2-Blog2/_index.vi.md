@@ -1,6 +1,6 @@
 ---
 title: "Tự động hóa bôi sáng phụ đề video đồng bộ với giọng đọc bằng Amazon Transcribe"
-date: 2026-07-21
+date: 2026-07-20
 weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
@@ -12,6 +12,7 @@ pre: " <b> 3.2. </b> "
 | --- | --- |
 | Tiêu đề gốc | Tự động hóa tính năng bôi sáng phụ đề video đồng bộ với giọng đọc bằng Amazon Transcribe |
 | Tác giả / Nguồn | AWS Study Group VN — bài chia sẻ của nhóm thực tập |
+| Ngày đăng | 20/07/2026 |
 | Chủ đề | Amazon Transcribe, S3, Lambda, Step Functions, pipeline media serverless, EdTech, bôi sáng phụ đề kiểu karaoke |
 | AWS Blog liên quan | [Serverless video subtitles](https://aws.amazon.com/blogs/compute/implementing-serverless-video-subtitles/), [Video subtitles with translation (ML)](https://aws.amazon.com/blogs/machine-learning/create-video-subtitles-with-translation-using-machine-learning/) |
 
