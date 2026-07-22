@@ -11,8 +11,7 @@ pre: " <b> 3.2. </b> "
 | Item | Details |
 | --- | --- |
 | Original title | Tự động hóa tính năng bôi sáng phụ đề video đồng bộ với giọng đọc bằng Amazon Transcribe |
-| Author / Source | AWS Study Group VN — community post (internship team sharing) |
-| Publish date | 20/07/2026 |
+| Author / Source | Toàn Ngô — [AWS Study Group VN](https://www.facebook.com/share/p/191PW65UTV/) (Facebook community post) |
 | Topics | Amazon Transcribe, S3, Lambda, Step Functions, serverless media pipeline, EdTech, karaoke-style subtitle highlight |
 | Related AWS blogs | [Serverless video subtitles](https://aws.amazon.com/blogs/compute/implementing-serverless-video-subtitles/), [Video subtitles with translation (ML)](https://aws.amazon.com/blogs/machine-learning/create-video-subtitles-with-translation-using-machine-learning/) |
 
@@ -22,7 +21,7 @@ The post describes a practical EdTech / video-streaming use case: **word-level s
 
 The proposed design is a **serverless pipeline**: upload video to **Amazon S3** → trigger **Lambda** (or orchestrate with **Step Functions**) → run an **Amazon Transcribe** job → consume a rich JSON transcript on the frontend to highlight the current word from the video player's current time.
 
-![Serverless subtitle / translation pipeline: Transcribe → Translate → Polly + Python subtitles → MoviePy](/images/3-BlogsTranslated/3.2-Blog2/transcribe-subtitle-architecture.png)
+![Facebook post by AWS Study Group VN on Amazon Transcribe subtitle highlighting](/images/3-BlogsTranslated/3.2-Blog2/facebook-post.png)
 
 #### 3. Main content
 
@@ -46,6 +45,8 @@ On the client, while the video plays, a small tracker compares the player's **cu
 Transcribe is billed by **minutes of audio processed**. To cut cost and job time, extract audio (e.g. MP3) with **Lambda** or **Amazon Elastic Transcoder** first, then send the lighter audio file to Transcribe instead of the full heavy video.
 
 The related AWS Machine Learning Blog diagram also shows how the same transcript can feed **AWS Translate**, **Amazon Polly** (translated audio), Python subtitle generation, and **MoviePy** assembly into a final media file — useful when the platform needs multi-language subtitles or dubbed audio as well as highlight sync.
+
+![Serverless subtitle / translation pipeline: Transcribe → Translate → Polly + Python subtitles → MoviePy](/images/3-BlogsTranslated/3.2-Blog2/transcribe-subtitle-architecture.png)
 
 #### 4. Reflection
 

@@ -11,8 +11,7 @@ pre: " <b> 3.3. </b> "
 | Item | Details |
 | --- | --- |
 | Original title | Xây dựng tính năng đồng bộ tiến độ video (Progress Syncing) realtime với AWS AppSync |
-| Author / Source | AWS Study Group VN — community post (internship team sharing, follow-up to Blog 2) |
-| Publish date | 20/07/2026 |
+| Author / Source | Toàn Ngô — [AWS Study Group VN](https://www.facebook.com/share/p/1FPP7H5zBg/) (Facebook community post) |
 | Topics | AWS AppSync, GraphQL, DynamoDB Direct Resolver, WebSocket subscriptions, realtime sync, EdTech |
 | Related AWS docs | [AppSync real-time data](https://docs.aws.amazon.com/appsync/latest/devguide/real-time-data.html), [DynamoDB resolvers tutorial](https://docs.aws.amazon.com/appsync/latest/devguide/tutorial-dynamodb-resolvers.html) |
 
@@ -22,7 +21,7 @@ Following the Transcribe subtitle post, the team shares a second EdTech/video ar
 
 Instead of a traditional REST API that repeatedly saves and polls watch state (latency and cost grow as traffic scales), they use **AWS AppSync (GraphQL)** with **Amazon DynamoDB**, relying on **WebSockets** for push updates.
 
-![Progress Syncing realtime with AWS AppSync and Amazon DynamoDB](/images/3-BlogsTranslated/3.3-Blog3/appsync-progress-sync.png)
+![Facebook post by AWS Study Group VN on AWS AppSync progress syncing](/images/3-BlogsTranslated/3.3-Blog3/facebook-post.png)
 
 #### 3. Main content
 
@@ -43,6 +42,8 @@ When the same account opens on another device, that client connects with a **Gra
 ##### 3.4. Operational advantage
 
 Teams do not manage WebSocket infrastructure themselves. AppSync handles connection lifecycle and scales the realtime layer, reducing backend burden for multi-device sync.
+
+![Progress Syncing realtime with AWS AppSync and Amazon DynamoDB](/images/3-BlogsTranslated/3.3-Blog3/appsync-progress-sync.png)
 
 #### 4. Reflection
 

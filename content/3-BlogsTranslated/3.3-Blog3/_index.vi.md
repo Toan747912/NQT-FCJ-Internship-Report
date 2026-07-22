@@ -11,8 +11,7 @@ pre: " <b> 3.3. </b> "
 | Hạng mục | Nội dung |
 | --- | --- |
 | Tiêu đề gốc | Xây dựng tính năng đồng bộ tiến độ video (Progress Syncing) realtime với AWS AppSync |
-| Tác giả / Nguồn | AWS Study Group VN — bài chia sẻ của nhóm thực tập (tiếp nối Blog 2) |
-| Ngày đăng | 20/07/2026 |
+| Tác giả / Nguồn | Toàn Ngô — [AWS Study Group VN](https://www.facebook.com/share/p/1FPP7H5zBg/) (bài chia sẻ trên Facebook) |
 | Chủ đề | AWS AppSync, GraphQL, DynamoDB Direct Resolver, WebSocket subscription, đồng bộ realtime, EdTech |
 | AWS Docs liên quan | [AppSync real-time data](https://docs.aws.amazon.com/appsync/latest/devguide/real-time-data.html), [DynamoDB resolvers tutorial](https://docs.aws.amazon.com/appsync/latest/devguide/tutorial-dynamodb-resolvers.html) |
 
@@ -22,7 +21,7 @@ Tiếp nối bài Transcribe về phụ đề, nhóm chia sẻ kiến trúc th�
 
 Thay vì REST API gọi liên tục để lưu và lấy trạng thái (độ trễ và tài nguyên khó tối ưu khi scale), nhóm dùng **AWS AppSync (GraphQL)** kết hợp **Amazon DynamoDB**, tận dụng **WebSockets** để đẩy cập nhật realtime.
 
-![Đồng bộ tiến độ realtime với AWS AppSync và Amazon DynamoDB](/images/3-BlogsTranslated/3.3-Blog3/appsync-progress-sync.png)
+![Bài viết Facebook của AWS Study Group VN về đồng bộ tiến độ video với AWS AppSync](/images/3-BlogsTranslated/3.3-Blog3/facebook-post.png)
 
 #### 3. Nội dung chính
 
@@ -43,6 +42,8 @@ Khi cùng tài khoản mở trên thiết bị khác, client đó kết nối b�
 ##### 3.4. Ưu điểm vận hành
 
 Không cần tự quản lý hạ tầng WebSocket phức tạp. AppSync duy trì kết nối realtime và scale lớp đồng bộ, giảm tải cho backend khi nhiều thiết bị cùng theo dõi một tài khoản.
+
+![Đồng bộ tiến độ realtime với AWS AppSync và Amazon DynamoDB](/images/3-BlogsTranslated/3.3-Blog3/appsync-progress-sync.png)
 
 #### 4. Nhận xét
 

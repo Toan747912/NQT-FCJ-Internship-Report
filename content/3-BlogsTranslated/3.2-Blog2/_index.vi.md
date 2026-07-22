@@ -11,8 +11,7 @@ pre: " <b> 3.2. </b> "
 | Hạng mục | Nội dung |
 | --- | --- |
 | Tiêu đề gốc | Tự động hóa tính năng bôi sáng phụ đề video đồng bộ với giọng đọc bằng Amazon Transcribe |
-| Tác giả / Nguồn | AWS Study Group VN — bài chia sẻ của nhóm thực tập |
-| Ngày đăng | 20/07/2026 |
+| Tác giả / Nguồn | Toàn Ngô — [AWS Study Group VN](https://www.facebook.com/share/p/191PW65UTV/) (bài chia sẻ trên Facebook) |
 | Chủ đề | Amazon Transcribe, S3, Lambda, Step Functions, pipeline media serverless, EdTech, bôi sáng phụ đề kiểu karaoke |
 | AWS Blog liên quan | [Serverless video subtitles](https://aws.amazon.com/blogs/compute/implementing-serverless-video-subtitles/), [Video subtitles with translation (ML)](https://aws.amazon.com/blogs/machine-learning/create-video-subtitles-with-translation-using-machine-learning/) |
 
@@ -22,7 +21,7 @@ Bài viết chia sẻ một use-case thực tế cho nền tảng học trực t
 
 Giải pháp đề xuất là **pipeline serverless**: upload video lên **Amazon S3** → kích hoạt **Lambda** (hoặc điều phối bằng **Step Functions**) → tạo job **Amazon Transcribe** → frontend dùng JSON chi tiết để highlight đúng từ đang được nói theo thời gian phát video.
 
-![Pipeline phụ đề / dịch thuật serverless: Transcribe → Translate → Polly + Python subtitles → MoviePy](/images/3-BlogsTranslated/3.2-Blog2/transcribe-subtitle-architecture.png)
+![Bài viết Facebook của AWS Study Group VN về bôi sáng phụ đề bằng Amazon Transcribe](/images/3-BlogsTranslated/3.2-Blog2/facebook-post.png)
 
 #### 3. Nội dung chính
 
@@ -46,6 +45,8 @@ Khi video player chạy, chỉ cần theo dõi **current time** của video, so 
 Transcribe tính phí theo **số phút âm thanh** được xử lý. Để tối ưu chi phí và thời gian, nên dùng Lambda (hoặc **Amazon Elastic Transcoder**) tách audio (MP3) từ video trước, rồi mới đưa file audio nhẹ hơn cho Transcribe — thay vì bắt hệ thống xử lý nguyên file video nặng.
 
 Sơ đồ liên quan trên AWS Machine Learning Blog còn cho thấy cùng một transcript có thể nối tiếp **AWS Translate**, **Amazon Polly** (audio đã dịch), Python tạo file phụ đề, rồi **MoviePy** ghép thành media cuối — hữu ích khi nền tảng cần phụ đề đa ngôn ngữ hoặc lồng tiếng ngoài tính năng highlight.
+
+![Pipeline phụ đề / dịch thuật serverless: Transcribe → Translate → Polly + Python subtitles → MoviePy](/images/3-BlogsTranslated/3.2-Blog2/transcribe-subtitle-architecture.png)
 
 #### 4. Nhận xét
 
